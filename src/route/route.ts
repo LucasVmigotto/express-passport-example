@@ -79,12 +79,14 @@ export default (passport: any, app: any) => {
   ));
 
   app.get('/api/google-login', passport.authenticate('google',
-    { scope: [ 'https://www.googleapis.com/auth/userinfo.email' ] }
+    { scope: [ 'https://www.googleapis.com/auth/plus.profile.emails.read'] }
   ));
 
   app.get('/api/google/callback', passport.authenticate('google',
-    { successRedirect: '/profile', failureRedirect: '/login' }
-  ));
+    { failureRedirect: '/login' }
+  ), (req: Request, res: Response) => {
+    res.render('profile', { user: req.user });
+  });
 
   app.get('/api/profile', apiAuthJwt, (req: Request, res: Response) => {
     res.json({ data: { profile: req.user }});
