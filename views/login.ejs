@@ -1,0 +1,21 @@
+<form action="/login" method="post">
+  <div>
+  <label>Email:</label>
+  <input type="text" name="username"/><br/>
+  </div>
+  <div>
+  <label>Password:</label>
+  <input type="password" name="password"/>
+  </div>
+  <div>
+  <input type="submit" value="Submit"/>
+  </div>
+</form>
+<p>Or you can do this using your <a href="/api/facebook-login">Facebook</a></p>
+<p>Would you preffer to use insted your <a href="/api/google-login">Google Account</a></p>
+<p>Maybe you want to <a href="/signup">create an account</a></p>
+<div>
+  <% errorMessages.forEach(message => { %>
+    <p><%= message %></p>
+  <% }) %>
+</div>

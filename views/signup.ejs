@@ -1,0 +1,12 @@
+<body>
+  <div class="error">
+    <p><%= message %></p>
+  </div>
+  <form action="/signup" method="POST">
+    <label for="username">Display name</label><input name="displayname" id="displayname"><br/>
+    <label for="email">Username</label><input name="username" id="username"><br/>
+    <label for="password">Password</label><input name="password" id="password"><br/>
+    <input type="submit" id="submit" value="Submit">
+  </form>
+  <p>Already have an account? <a href="/login">Login use it</a></p>
+</body>
