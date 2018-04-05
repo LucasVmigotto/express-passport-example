@@ -2,6 +2,6 @@ package-lock.json
 node_modules/
 npm-debug.log
 .editorconfig
-file
+.file
 dist/
 .vscode
