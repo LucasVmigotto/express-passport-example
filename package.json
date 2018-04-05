@@ -1,0 +1,57 @@
+{
+  "name": "express-passport-example",
+  "version": "0.0.0",
+  "description": "Express 4 using Passport for authentication",
+  "keywords": [
+    "express",
+    "passport"
+  ],
+  "author": "Edison E. Abreu <edison@amix.com.br>",
+  "scripts": {
+    "start": "nodemon --inspect dist/server.js",
+    "dev": "tsc -w"
+  },
+  "dependencies": {
+    "connect-ensure-login": "^0.1.1",
+    "connect-flash": "^0.1.1",
+    "ejs": "^2.5.8",
+    "express": "^4.13.3",
+    "express-session": "^1.15.6",
+    "jsonwebtoken": "^8.2.1",
+    "mongoose": "^5.0.12",
+    "morgan": "^1.9.0",
+    "passport": "^0.4.0",
+    "passport-facebook": "^2.1.1",
+    "passport-google": "^0.3.0",
+    "passport-google-oauth": "^1.0.0",
+    "passport-jwt": "^4.0.0",
+    "passport-local": "^1.0.0"
+  },
+  "devDependencies": {
+    "@types/body-parser": "^1.16.8",
+    "@types/connect-ensure-login": "^0.1.4",
+    "@types/connect-flash": "0.0.34",
+    "@types/cookie-parser": "^1.4.1",
+    "@types/ejs": "^2.5.0",
+    "@types/express": "^4.11.1",
+    "@types/express-session": "^1.15.8",
+    "@types/jsonwebtoken": "^7.2.6",
+    "@types/mongoose": "^5.0.7",
+    "@types/morgan": "^1.7.35",
+    "@types/node": "^9.6.2",
+    "@types/passport": "^0.4.4",
+    "@types/passport-facebook": "^2.1.8",
+    "@types/passport-google-oauth": "^1.0.38",
+    "@types/passport-jwt": "^3.0.1",
+    "@types/passport-local": "^1.0.33",
+    "jest": "^22.4.3",
+    "nodemon": "^1.17.3",
+    "standard": "^11.0.1",
+    "ts-jest": "^22.4.2",
+    "typescript": "^2.8.1"
+  },
+  "engines": {
+    "node": "^8.9.4",
+    "npm": "^5.6.0"
+  }
+}
