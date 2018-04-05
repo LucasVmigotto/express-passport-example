@@ -28,14 +28,14 @@ app.set('view engine', 'ejs');
 
 passport.serializeUser((user: UserModel, done) => {
   return done(null, user._id);
-})
+});
 
 passport.deserializeUser((id: Number, done) => {
   User.findById(id, (err: Error, user: UserModel) => {
     if (err) return done(null, { message: err.message });
     return done(null, user);
   });
-})
+});
 
 app.use(flash());
 app.use(bodyParser.json());
