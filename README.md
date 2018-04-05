@@ -10,6 +10,11 @@ Use this example as a starting point for your own apps.
 npm install
 ```
 
+## Compile
+```bash
+npm run compile
+```
+
 ## Start the server
 
 ```bash

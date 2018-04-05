@@ -9,6 +9,7 @@
   "author": "Edison E. Abreu <edison@amix.com.br>",
   "scripts": {
     "start": "nodemon --inspect dist/server.js",
+    "compile": "tsc",
     "dev": "tsc -w"
   },
   "dependencies": {
