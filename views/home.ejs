@@ -12,7 +12,7 @@
     <% if (!user) { %>
       <div class="home"><p>Welcome! Please <a href="/login">log in</a>.</p></div>
     <% } else { %>
-      <div class="welcome"><p>Hello, <%= user.displayname %>. View your <a href="/profile">profile</a>.</p></div>
+      <div class="welcome"><p>Hello, <%= user.local.name %>. View your <a href="/profile">profile</a>.</p></div>
     <% } %>
   </body>
 </html>
