@@ -1,6 +1,16 @@
+<p>Account ID: <%= user._id %></p>
 <p>
-  ID: <%= user._id %><br/>
-  User name: <%= user.username %><br/>
-  Display name: <%= user.displayname %><br/>
-  </p>
-  <a href="/logout">Log out</a>
+  Local email: <%= user.local.email %><br/>
+  Local name: <%= user.local.name %><br/>
+</p>
+<p>
+  Facebook ID: <%= user.facebook.id %><br/>
+  Facebook email: <%= user.facebook.username %><br/>
+  Facebook name: <%= user.facebook.name %><br/>
+</p>
+<p>
+  Google ID: <%= user.facebook.id %><br/>
+  Google email: <%= user.facebook.username %><br/>
+  Google name: <%= user.facebook.name %><br/>
+</p>
+<a href="/logout">Log out</a>
