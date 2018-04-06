@@ -2,7 +2,9 @@
  * Import mongoose
  */
 import * as mongoose from 'mongoose';
-
+/**
+ * Describe a UserModel
+ */
 export type UserModel = mongoose.Document & {
   local: {
     name: String,
