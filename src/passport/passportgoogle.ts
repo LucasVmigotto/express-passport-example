@@ -8,7 +8,6 @@ export default (passport: any) => {
     clientSecret: config.googleAuth.clientSecret,
     callbackURL: config.googleAuth.callbackURL
   }, (token, refreshToken, profile, done) => {
-    console.log(profile);
     process.nextTick(() => {
       User.findOne({ username: profile.username },
         (err: Error, user: UserModel) => {
