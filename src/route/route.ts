@@ -71,7 +71,7 @@ export default (passport: any, app: any) => {
   })
 
   app.get('/api/facebook-login', passport.authenticate('facebook',
-    { scope: [ 'public_profile', 'email' ] }
+    { scope: [ 'public_profile' ] }
   ));
 
   app.get('/api/facebook/callback', passport.authenticate('facebook',
