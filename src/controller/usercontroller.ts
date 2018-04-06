@@ -1,6 +1,7 @@
 import { default as User, UserModel } from '../model/users';
 
 export let createUser = (user: UserModel): Promise<boolean> => {
+  console.log(user)
   let newUser = new User(user);
   return new Promise((resolve, reject) => {
     newUser.save((err: Error) => {
@@ -21,7 +22,7 @@ export let readUser = (id: number): Promise<UserModel> => {
 
 export let updateUser = (user: UserModel): Promise<boolean> => {
   return new Promise((resolve, reject) => {
-    User.findOneAndUpdate({ _id: user.id }, user, { new: true },
+    User.findOneAndUpdate({ _id: user._id }, user, { new: true },
       (err: Error, updated: UserModel) => {
         if (err) reject(false)
         resolve(true)
