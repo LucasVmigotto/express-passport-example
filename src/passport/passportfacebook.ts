@@ -3,7 +3,7 @@ import { default as config } from '../config/auth';
 import { default as User, UserModel } from '../model/users';
 
 export default (passport: any) => {
-  passport.use(new Facebook.Strategy(config.googleAuth,
+  passport.use(new Facebook.Strategy(config.facebookAuth,
     (token, refreshToken, profile, done) => {
       process.nextTick(() => {
         User.findOne({ 'facebook.id': profile.id },
