@@ -5,12 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Home Page</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="/res/css/normalize.css"/>
+    <script src="/res/js/jquery-3.3.1.min.js"></script>
   </head>
   <body>
     <% if (!user) { %>
-      <p>Welcome! Please <a href="/login">log in</a>.</p>
+      <div class="home"><p>Welcome! Please <a href="/login">log in</a>.</p></div>
     <% } else { %>
-      <p>Hello, <%= user.displayname %>. View your <a href="/profile">profile</a>.</p>
+      <div class="welcome"><p>Hello, <%= user.displayname %>. View your <a href="/profile">profile</a>.</p></div>
     <% } %>
   </body>
 </html>
