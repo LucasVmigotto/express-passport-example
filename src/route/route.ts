@@ -79,7 +79,7 @@ export default (passport: any, app: any) => {
   ));
 
   app.get('/api/google-login', passport.authenticate('google',
-    { scope: [ 'https://www.googleapis.com/auth/plus.profile.emails.read'] }
+    { scope: [ 'https://www.googleapis.com/auth/plus.login'] }
   ));
 
   app.get('/api/google/callback', passport.authenticate('google',
