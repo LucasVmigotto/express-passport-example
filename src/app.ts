@@ -16,8 +16,9 @@ const flash = require('connect-flash');
 
 let app = express();
 
-app.set('views', path.join(__dirname, '../views'));
+app.set('views', path.join(__dirname, '..', 'views'));
 app.set('view engine', 'ejs');
+app.use(express.static(path.join(__dirname, '..', 'static')));
 
 (<any> mongoose).connect(DbInfo.url).then(
   () => { console.log('Connected with the database.') }
