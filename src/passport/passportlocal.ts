@@ -9,8 +9,8 @@ const jwtAudience = process.env.JWT_AUDIENCE || 'http://localhost:3000';
 
 export default (passport: any) => {
 
-  passport.use(new Local.Strategy((username, password, done) => {
-    User.findOne({ username: username, password: password },
+  passport.use(new Local.Strategy((email, password, done) => {
+    User.findOne({ 'local.email': email, 'local.password': password },
       (err: Error, user: UserModel) => {
         if (err) return done(null, false, { message: err.message })
         if (!user) return done(null, false, { message: 'User not found' })
