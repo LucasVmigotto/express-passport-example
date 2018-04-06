@@ -1,5 +1,16 @@
-<% if (!user) { %>
-  <p>Welcome! Please <a href="/login">log in</a>.</p>
-<% } else { %>
-  <p>Hello, <%= user.displayname %>. View your <a href="/profile">profile</a>.</p>
-<% } %>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Home Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <% if (!user) { %>
+      <p>Welcome! Please <a href="/login">log in</a>.</p>
+    <% } else { %>
+      <p>Hello, <%= user.displayname %>. View your <a href="/profile">profile</a>.</p>
+    <% } %>
+  </body>
+</html>

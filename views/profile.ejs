@@ -1,16 +1,27 @@
-<p>Account ID: <%= user._id %></p>
-<p>
-  Local email: <%= user.local.email %><br/>
-  Local name: <%= user.local.name %><br/>
-</p>
-<p>
-  Facebook ID: <%= user.facebook.id %><br/>
-  Facebook email: <%= user.facebook.username %><br/>
-  Facebook name: <%= user.facebook.name %><br/>
-</p>
-<p>
-  Google ID: <%= user.facebook.id %><br/>
-  Google email: <%= user.facebook.username %><br/>
-  Google name: <%= user.facebook.name %><br/>
-</p>
-<a href="/logout">Log out</a>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Profile Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <p>Account ID: <%= user._id %></p>
+    <p>
+      Local email: <%= user.local.email %><br/>
+      Local name: <%= user.local.name %><br/>
+    </p>
+    <p>
+      Facebook ID: <%= user.facebook.id %><br/>
+      Facebook email: <%= user.facebook.username %><br/>
+      Facebook name: <%= user.facebook.name %><br/>
+    </p>
+    <p>
+      Google ID: <%= user.facebook.id %><br/>
+      Google email: <%= user.facebook.username %><br/>
+      Google name: <%= user.facebook.name %><br/>
+    </p>
+    <a href="/logout">Log out</a>
+  </body>
+</html>

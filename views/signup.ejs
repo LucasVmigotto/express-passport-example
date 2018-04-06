@@ -1,12 +1,21 @@
-<body>
-  <div class="error">
-    <p><%= message %></p>
-  </div>
-  <form action="/signup" method="POST">
-    <label for="local.name">Name</label><input name="local.name" id="local.name"><br/>
-    <label for="local.email">Email</label><input name="local.email" id="local.email"><br/>
-    <label for="local.password">Password</label><input name="local.password" id="local.password"><br/>
-    <input type="submit" id="submit" value="Submit">
-  </form>
-  <p>Already have an account? <a href="/login">Login use it</a></p>
-</body>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Signup Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <div class="error">
+      <p><%= message %></p>
+    </div>
+    <form action="/signup" method="POST">
+      <label for="local.name">Name</label><input name="local.name" id="local.name"><br/>
+      <label for="local.email">Email</label><input name="local.email" id="local.email"><br/>
+      <label for="local.password">Password</label><input name="local.password" id="local.password"><br/>
+      <input type="submit" id="submit" value="Submit">
+    </form>
+    <p>Already have an account? <a href="/login">Login use it</a></p>
+  </body>
+</html>
