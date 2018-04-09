@@ -4,18 +4,13 @@ This example demonstrates how to use [Express](http://expressjs.com/) 4.x and [P
 
 Use this example as a starting point for your own apps.
 
-## Install
+### Install
 
 ```bash
 npm install
 ```
 
-## Compile
-```bash
-npm run compile
-```
-
-## Start the server
+### Start the server
 
 ```bash
 npm start
@@ -34,6 +29,28 @@ curl -v -d username=jack -d password=secret http://localhost:3000/api/login
 
 ```bash
 # GET user profile if valid token
-curl -v -H 'Authorization: Bearer <your token>' http://localhost:3000/api/profile
+curl -v -H 'Authorization: Bearer mytoken' http://localhost:3000/api/profile
 ## Success response: {"user":{"id":1,"username":"jack","password":"secret","displayName":"Jack","emails":[{"value":"jack@example.com"}]}}
 ## Fail response: {"error":{"message":"..."}}
+```
+
+## How works?
+
+```mermaid
+sequenceDiagram
+	participant User's Browser
+	participant App with OAuth
+	participant Social Provider
+	User's Browser ->> App with OAuth: 1. GET
+	App with OAuth ->> Social Provider: 2. Redirect
+	Social Provider ->> User's Browser: 3. Redirect
+	User's Browser ->> App with OAuth: 4. GET
+	App with OAuth ->> Social Provider: 5. GET
+	Social Provider ->> User's Browser: 6. Response
+```
+>1. Click in the login provider button
+>2. Send to login URL page
+>3. User accepts dialog and sent to redirect URL with the authorization
+>4. Redirect URL with the code
+>5. OAuth authorize
+>6. Access token
