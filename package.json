@@ -6,7 +6,7 @@
     "express",
     "passport"
   ],
-  "author": "Edison E. Abreu <edison@amix.com.br>",
+  "author": "Lucas Vidor Migotto <lvmigotto1@gmail.com>",
   "scripts": {
     "start": "nodemon --inspect dist/server.js",
     "compile": "tsc",
